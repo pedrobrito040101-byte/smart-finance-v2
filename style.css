@@ -1,0 +1,68 @@
+:root {
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --text: #f8fafc;
+    --primary: #deff9a;
+    --red: #ff4d4d;
+    --border: #334155;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container { width: 100%; max-width: 400px; }
+
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+h1 span { color: var(--primary); }
+
+.balance { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+.card { background: var(--card-bg); padding: 15px; border-radius: 12px; border: 1px solid var(--border); text-align: center; }
+.card.total { grid-column: span 2; background: var(--primary); color: #000; border: none; }
+
+.money { font-size: 20px; font-weight: 700; }
+.money.plus { color: var(--primary); }
+.money.minus { color: var(--red); }
+
+h2 { font-size: 18px; margin: 20px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+
+.transactions-list { list-style: none; }
+.transactions-list li {
+    background: var(--card-bg);
+    margin-bottom: 10px;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    border-left: 5px solid #ccc;
+}
+.transactions-list li.plus { border-color: var(--primary); }
+.transactions-list li.minus { border-color: var(--red); }
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #1e293b;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: #fff;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
